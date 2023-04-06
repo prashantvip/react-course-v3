@@ -1,5 +1,19 @@
+import { useState } from "react";
+
 const UseStateGotcha = () => {
-  return <h2>useState "gotcha"</h2>;
+  const [count, setCount] = useState(0);
+  const handleClick = () => {
+    setCount((currentState) => {
+      const newState = currentState + 1;
+      return newState;
+    })
+  }
+  return (
+    <div>
+      <h4>{count}</h4>
+      <button className="btn" type="button" onClick={handleClick}>Increase</button>
+    </div>
+  );
 };
 
 export default UseStateGotcha;
