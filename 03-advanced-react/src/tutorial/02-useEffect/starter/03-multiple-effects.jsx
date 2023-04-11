@@ -4,9 +4,9 @@ const MultipleEffects = () => {
   const [value, setValue] = useState(0);
   const [secondValue, setSecondValue] = useState(0);
 
-  // useEffect(() => {
-  //   console.log('hello from first useEffect');
-  // }, []);
+  useEffect(() => {
+    console.log('hello from first useEffect');
+  }, [value, secondValue]);
 
   // useEffect(() => {
   //   console.log('hello from second useEffect');
